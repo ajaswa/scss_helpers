@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'scss-helpers'
+    gem 'scss_helpers'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install scss-helpers
+    $ gem install scss_helpers
 
 ## Usage
 

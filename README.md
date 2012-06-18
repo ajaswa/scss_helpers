@@ -1,6 +1,6 @@
 # Scss Helpers
 
-TODO: Write a gem description
+This gem includes various SCSS mixins to help a web developer write CSS faster. While most are cross-browser this is not an attempt at being a polyfill but rather an effort to use CSS3 to its full potential. I've tried to keep the mixins as close to the actual CSS declaration as possible but in some cases it could not be done.
 
 ## Installation
 
@@ -17,8 +17,32 @@ Or install it yourself as:
     $ gem install scss_helpers
 
 ## Usage
+To use the various mixins, you will need to add the helpers.scss file to your application.css.scss:
 
-TODO: Write usage instructions here
+	@import 'helpers';
+
+All the mixins are standard SCSS mixins and are included as such.
+
+  	@include border-radius(5px);
+
+## Heplers
+Helpers with great usefulness:
+
+* border-radius
+* box-shadow
+* lin-gradient
+* circle
+* transition
+
+Helpers with questionable helpfulness:
+
+* clear
+* text-shadow
+* text-gradient
+* font
+
+## Known Issues
+* Old webkit browsers only use the "left top, left bottom" linear-gradient.
 
 ## Contributing
 

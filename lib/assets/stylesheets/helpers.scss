@@ -1,8 +1,8 @@
-/* @mixin css3pie {
+// @mixin css3pie {
    // Turn this on and include if you want to use PIE
-   behavior: url(PIE.htc);
-}
-*/
+   // behavior: url(PIE.htc);
+// }
+
 @mixin border-radius($r) {
   // $r: radius, can use 5px 10px 10px 5px
   -moz-border-radius: $r;

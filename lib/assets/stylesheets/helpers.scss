@@ -1,8 +1,3 @@
-// @mixin css3pie {
-   // Turn this on and include if you want to use PIE
-   // behavior: url(PIE.htc);
-// }
-
 @mixin border-radius($r) {
   // $r: radius, can use 5px 10px 10px 5px
   -moz-border-radius: $r;
@@ -23,7 +18,6 @@
   // $start: hex of the start
   // $stop:  hex of the stop
   // $point: top? 
-  // TODO: figure out how to make old webkit use $point
   background: $color;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(100%, $stop)); /* Safari 4+, old Chrome */
   background: -webkit-linear-gradient($point, $start, $stop); /* Safari 5.1+, Chrome */
@@ -35,24 +29,21 @@
   background: linear-gradient($point, $start, $stop);
 }
 
-@mixin font( $font-name, $font-url ) {
-  // $font-name: The name of the font to use
-  // $font-url:  The url to given font sans the ext.
-  @font-face {
-    font-family: '#{$font-name}';
-    src: url('#{$font-url}.eot?#iefix') format('embedded-opentype'), 
-         url('#{$font-url}.woff') format('woff'), 
-         url('#{$font-url}.ttf')  format('truetype'),
-         url('#{$font-url}.svg#svg#{$font-name}') format('svg');
-  }
-}
-
 @mixin circle($r) {
   // $r: radius
   @include border-radius($r);
   height: ($r * 2);
   width: ($r * 2);
 }
+
+@mixin transition($args: all .6s linear) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 
 @mixin clear() {
   clear: both;
@@ -77,11 +68,14 @@
   //-ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#{$color}', offx='#{$x}', offy='#{$y}')";
   text-shadow: $x+px $y+px $b+px $color;
 }
-@mixin transition($args: all .6s linear) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+@mixin font( $font-name, $font-url ) {
+  // $font-name: The name of the font to use
+  // $font-url:  The url to given font sans the ext.
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('#{$font-url}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}.woff') format('woff'),
+         url('#{$font-url}.ttf')  format('truetype'),
+         url('#{$font-url}.svg#svg#{$font-name}') format('svg');
+  }
 }
-

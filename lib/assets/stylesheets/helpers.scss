@@ -1,11 +1,11 @@
-@mixin border-radius($r) {
+@mixin border-radius( $r ) {
   // $r: radius, can use 5px 10px 10px 5px
   -moz-border-radius: $r;
   -webkit-border-radius: $r;
   border-radius: $r;
 }
 
-@mixin box-shadow($args) {
+@mixin box-shadow( $args ) {
   // $args: standard CSS including inset
   -webkit-box-shadow: $args;
   -o-box-shadow: $args;
@@ -29,14 +29,14 @@
   background: linear-gradient($point, $start, $stop);
 }
 
-@mixin circle($r) {
+@mixin circle( $r ) {
   // $r: radius
   @include border-radius($r);
   height: ($r * 2);
   width: ($r * 2);
 }
 
-@mixin transition($args: all .6s linear) {
+@mixin transition( $args: all .6s linear ) {
   -webkit-transition: $args;
   -moz-transition: $args;
   -ms-transition: $args;
@@ -44,6 +44,34 @@
   transition: $args;
 }
 
+@mixin opacity($opacity: 0.5) {
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  -webkit-opacity: $opacity;
+  opacity: $opacity;
+}
+@mixin transition-duration( $duration: 0.6s ) {
+  -moz-transition-duration: $duration;
+  -webkit-transition-duration: $duration;
+  transition-duration: $duration;
+}
+@mixin rotation( $deg: 90deg ) {
+  -webkit-transform: rotate( $deg );
+  -moz-transform: rotate( $deg );
+  transform: rotate( $deg );
+}
+@mixin scale( $ratio: 1.5 ) {
+  -webkit-transform: scale( $ratio );
+  -moz-transform: scale( $ratio );
+  transform: scale( $ratio );
+}
+@mixin translate( $x: 0, $y: 0 ) {
+  -moz-transform: translate( $x, $y );
+  -webkit-transform: translate( $x, $y );
+  -o-transform: translate( $x, $y );
+  -ms-transform: translate( $x, $y );
+  transform: translate( $x, $y );
+}
 
 @mixin clear() {
   clear: both;

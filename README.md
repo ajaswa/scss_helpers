@@ -33,6 +33,7 @@ Helpers with great usefulness:
 * lin-gradient
 * circle
 * transition
+* inline-block ( adds support for ie7 though a ie7 class )
 
 Helpers with questionable helpfulness:
 

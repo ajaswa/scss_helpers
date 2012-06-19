@@ -36,6 +36,14 @@
   width: ($r * 2);
 }
 
+@mixin inline-block() {
+  display: inline-block;
+  .ie7 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
 @mixin transition( $args: all .6s linear ) {
   -webkit-transition: $args;
   -moz-transition: $args;

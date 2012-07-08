@@ -55,6 +55,11 @@
   -webkit-transition-duration: $duration;
   transition-duration: $duration;
 }
+@mixin transition-property( $property: all ) {
+  -moz-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
 @mixin rotation( $deg: 90deg ) {
   -webkit-transform: rotate( $deg );
   -moz-transform: rotate( $deg );

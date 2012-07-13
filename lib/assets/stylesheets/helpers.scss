@@ -44,6 +44,12 @@
   }
 }
 
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @mixin transition( $args: all .6s linear ) {
   -webkit-transition: $args;
   -moz-transition: $args;

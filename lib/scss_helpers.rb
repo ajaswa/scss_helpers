@@ -3,7 +3,7 @@ require "scss_helpers/version"
 module ScssHelpers
 
   def self.assets_path
-    Pathname.new(File.expand_path("../assets", __FILE__))
+    Pathname.new(File.expand_path("../../assets", __FILE__))
   end
 
   module Sprockets

@@ -64,6 +64,18 @@
   -webkit-opacity: $opacity;
   opacity: $opacity;
 }
+@mixin background-opacity($color, $alpha, $ie-color) {
+  // $color: #000 - #fff, $alpha: 0 - 1, $ie-color: hex color less the # eg. 000000
+  $rgba: rgba($color, $alpha);
+  $ie-alpha: $alpha * 100;
+  $ie-hex-str: ie_hex_str($rgba);
+  background-color: $rgba;
+  //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#{'#65'+$ie-color}",endColorstr="#{'#65'+$ie-color}");
+  filter: alpha(opacity=$ie-alpha);
+  .ie & {
+    background-color: $color;
+  }
+}
 @mixin transition-duration( $duration: 0.6s ) {
   -moz-transition-duration: $duration;
   -webkit-transition-duration: $duration;

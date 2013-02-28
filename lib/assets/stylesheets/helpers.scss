@@ -64,13 +64,12 @@
   -webkit-opacity: $opacity;
   opacity: $opacity;
 }
-@mixin background-opacity($color, $alpha, $ie-color) {
-  // $color: #000 - #fff, $alpha: 0 - 1, $ie-color: hex color less the # eg. 000000
+@mixin background-opacity($color, $alpha) {
+  // $color: #000 - #fff, $alpha: 0 - 1
   $rgba: rgba($color, $alpha);
   $ie-alpha: $alpha * 100;
   $ie-hex-str: ie_hex_str($rgba);
   background-color: $rgba;
-  //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#{'#65'+$ie-color}",endColorstr="#{'#65'+$ie-color}");
   filter: alpha(opacity=$ie-alpha);
   .ie & {
     background-color: $color;
@@ -90,6 +89,17 @@
   -webkit-transform: rotate( $deg );
   -moz-transform: rotate( $deg );
   transform: rotate( $deg );
+}
+@mixin rotateX( $deg: 90deg ) {
+  -webkit-transform: rotateX( $deg );
+  -moz-transform: rotateX( $deg );
+  transform: rotateX( $deg );
+}
+
+@mixin rotateY( $deg: 90deg ) {
+  -webkit-transform: rotateY( $deg );
+  -moz-transform: rotateY( $deg );
+  transform: rotateY( $deg );
 }
 @mixin scale( $ratio: 1.5 ) {
   -webkit-transform: scale( $ratio );

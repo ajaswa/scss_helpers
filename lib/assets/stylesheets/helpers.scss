@@ -85,6 +85,11 @@
   -webkit-transition-property: $property;
   transition-property: $property;
 }
+@mixin transition-delay( $delay: 0s ) {
+  -moz-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
 @mixin rotation( $deg: 90deg ) {
   -webkit-transform: rotate( $deg );
   -moz-transform: rotate( $deg );

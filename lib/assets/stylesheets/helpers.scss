@@ -68,7 +68,6 @@
   // $color: #000 - #fff, $alpha: 0 - 1
   $rgba: rgba($color, $alpha);
   $ie-alpha: $alpha * 100;
-  $ie-hex-str: ie_hex_str($rgba);
   background-color: $rgba;
   filter: alpha(opacity=$ie-alpha);
   .ie & {

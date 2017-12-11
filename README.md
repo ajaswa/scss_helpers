@@ -25,7 +25,7 @@ All the mixins are standard SCSS mixins and are included as such.
 
   	@include border-radius(5px);
 
-## Heplers
+## Helpers
 Helpers with great usefulness:
 
 * border-radius
